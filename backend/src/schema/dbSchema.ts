@@ -19,11 +19,9 @@ const userSchema = new mongoose.Schema({
 const contentSchema = new mongoose.Schema({
     title:{
         type:String,
-        required :true,
     },
     link:{
         type:String,
-        required:true,
     },
     type:{
         type:String,
@@ -35,9 +33,14 @@ const contentSchema = new mongoose.Schema({
     }
 })
 
+const linkSchema = new mongoose.Schema({
+    hash:String,
+    userId : {type:mongoose.Types.ObjectId,ref:"Users"}
+})
+
 const User = mongoose.model("Users",userSchema);
 const Content = mongoose.model("Contents",contentSchema);
-
+const Link = mongoose.model("Links",linkSchema);
 export  {
-    User,Content
+    User,Content,Link
 }
