@@ -3,7 +3,7 @@ import { ReactElement } from "react";
 interface buttonProps {
     varient:"primary" | "secondary",
     text:string,
-    startIcon : ReactElement,
+    startIcon? : ReactElement,
 }
 
 const varientClasses = {
