@@ -1,0 +1,15 @@
+FROM node:20-alpine
+
+WORKDIR /app
+
+COPY package* .
+
+RUN npm install
+RUN npm install tsc -g
+
+COPY . .
+
+
+EXPOSE 3000
+
+CMD ["node","dist/server.js"]

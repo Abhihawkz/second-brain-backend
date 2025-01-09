@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "tsc -b",
-    "dev": "tsc -b && node dist/server"
+    "build-ts" : "tsc",
+    "dev": "node dist/server"
   },
   "keywords": [],
   "author": "",
